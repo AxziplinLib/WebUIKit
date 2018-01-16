@@ -77,6 +77,7 @@
 		DC49D51B200E1B990015C060 = {
 			isa = PBXGroup;
 			children = (
+				DC49D557200E1C6B0015C060 /* Sources */,
 				DC49D526200E1B990015C060 /* WebUI */,
 				DC49D53B200E1B9A0015C060 /* WebUITests */,
 				DC49D546200E1B9A0015C060 /* WebUIUITests */,
@@ -123,6 +124,13 @@
 				DC49D549200E1B9A0015C060 /* Info.plist */,
 			);
 			path = WebUIUITests;
+			sourceTree = "<group>";
+		};
+		DC49D557200E1C6B0015C060 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
