@@ -14,6 +14,7 @@
 		DC49D532200E1B990015C060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC49D530200E1B990015C060 /* LaunchScreen.storyboard */; };
 		DC49D53D200E1B9A0015C060 /* WebUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49D53C200E1B9A0015C060 /* WebUITests.swift */; };
 		DC49D548200E1B9A0015C060 /* WebUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49D547200E1B9A0015C060 /* WebUIUITests.swift */; };
+		DC49D55A200E1F100015C060 /* WebVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49D559200E1F100015C060 /* WebVision.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DC49D543200E1B9A0015C060 /* WebUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC49D547200E1B9A0015C060 /* WebUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUIUITests.swift; sourceTree = "<group>"; };
 		DC49D549200E1B9A0015C060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC49D559200E1F100015C060 /* WebVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVision.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		DC49D557200E1C6B0015C060 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DC49D559200E1F100015C060 /* WebVision.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC49D55A200E1F100015C060 /* WebVision.swift in Sources */,
 				DC49D52A200E1B990015C060 /* ViewController.swift in Sources */,
 				DC49D528200E1B990015C060 /* AppDelegate.swift in Sources */,
 			);
