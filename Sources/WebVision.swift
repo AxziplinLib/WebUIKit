@@ -9,20 +9,32 @@
 import UIKit
 import WebKit
 
+public enum WebVisionError: String, Error {
+    case invalidGenericRefer = "The refered generic type must be one of `UIWebView` and `WKWebView`"
+}
+
 public class WebVision<W> {
     private var _webView: W!
     private let _config: Configuration
     
-    init?(config: Configuration = .frame(.zero)) {
-        precondition(W.self is UIWebView.Type || W.self is WKWebView.Type, "The generic type must be one of `UIWebView` or `WKWebView`.")
+    init(config: Configuration = .frame(.zero)) throws {
+        guard W.self is UIWebView.Type || W.self is WKWebView.Type else {
+            throw WebVisionError.invalidGenericRefer
+        }
         _config = config
     }
 }
 
-extension WebVision where W: WKWebView {
+extension WebVision where W == WKWebView {
     @available(iOS 8.0, *)
     convenience init(configuration: WKWebViewConfiguration) {
-        self.init(config: WebVision<W>.Configuration.config(configuration))!
+        try! self.init(config: Configuration.config(configuration))
+    }
+}
+
+extension WebVision where W == UIWebView {
+    public convenience init(frame: CGRect) {
+        try! self.init(config: Configuration(frame: frame))
     }
 }
 
@@ -30,7 +42,9 @@ extension WebVision where W: WKWebView {
 
 extension WebVision {
     public struct Configuration {
+        /// Frame of the vision's presentation.
         var frame: CGRect
+        /// Configuration object of WKWebView.
         private var _wkconfig: Any?
         
         @available(iOS 8.0, *)
@@ -57,5 +71,7 @@ extension WebVision.Configuration {
 // MARK: - UIView Support.
 
 extension WebVision {
-    // public var view: UIView! { return _webView }
+    public var webView: W {
+        return _webView
+    }
 }
